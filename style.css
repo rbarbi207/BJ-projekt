@@ -4,7 +4,6 @@
 
 body {
     background-image: url(pictures/blackjack.background.png);
-    background-repeat: no-repeat;
     background-size: cover;
     font-family: "Italianno";
     position: relative;
@@ -39,7 +38,7 @@ header {
     color: white;
     background-color: #0E592E;
     height: 50px;
-    box-shadow: 5px 2px 5px black;
+    box-shadow: 5px 2px 10px black;
 }
 
 header img {
@@ -76,16 +75,17 @@ header ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #0E592E;
     background-color: #0E592E;
-    border-radius: 100px;
     width: 1300px;
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     font-family: "Irish Grover";
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
 }
 
 .oval p {
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 #Irish {
@@ -102,11 +102,11 @@ button.doublef1 {
     align-items: center;
     background-color: #0E592E;
     box-shadow: inset 5px 5px 20px #0b301b;
-    font-size: 50px;
+    font-size: 60px;
     border: 1px solid #0b301b;
     border-radius: 10px;
-    width: 155px;
-    height: 45px;
+    width: 180px;
+    height: 65px;
     font-family: "Italianno";
     color: white;
     margin: 20px;
@@ -122,20 +122,71 @@ button.doublef2 {
     align-items: center;
     background-color: #0E592E;
     box-shadow: inset 5px 5px 20px #0b301b;
-    font-size: 50px;
+    font-size: 60px;
     border: 1px solid #0b301b;
     border-radius: 10px;
-    width: 155px;
-    height: 45px;
+    width: 180px;
+    height: 65px;
     font-family: "Italianno";
     color: white;
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -885px;
+    bottom: -910px;
     right: 0px;
 }
 
 button.doublef1:hover, button.doublef2:hover {
     border: 1px solid white;
+}
+
+.table {
+    position: absolute;
+    bottom: -880px;
+    right: 460px;
+    width: 1000px;
+}
+
+.pognarbal {
+    position: absolute;
+    bottom: -360px;
+    right: 840px;
+    width: 260px;
+}
+
+.dealerheartbox {
+    position: absolute;
+    bottom: -80px;
+    right: 2px;
+}
+
+.heart {
+    width: 70px;
+}
+
+.ourheartbox {
+    position: absolute;
+    bottom: -905px;
+    left: 10px;
+}
+
+.slomesz {
+    position: absolute;
+    bottom: -410px;
+    right: 820px;
+    width: 250px;
+}
+
+.slodos {
+    position: absolute;
+    bottom: -360px;
+    right: 840px;
+    width: 260px;
+}
+
+.chair {
+    position: absolute;
+    bottom: -650px;
+    right: 350px;
+    width: 1200px;
 }
