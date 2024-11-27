@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(pictures/blackjack.background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Italianno";
+    position: relative;
+}
+
+.irish-grover-regular {
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.italianno-regular {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+header .logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #0E592E;
+    height: 50px;
+    box-shadow: 5px 2px 5px black;
+}
+
+header img {
+    height: 50px;
+    float: left;
+}
+
+header h1 {
+    font-size: 70px;
+    padding-left: 10px;
+    font-weight: normal;
+    padding-top: 18px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    font-size: 45px;
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+    padding-left: 120px;
+    padding-right: 40px;
+    padding-top: 18px;
+}
+
+#black {
+    color: black;
+}
+
+.oval {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0E592E;
+    background-color: #0E592E;
+    border-radius: 100px;
+    width: 1300px;
+    box-shadow: 0px 5px 5px black;
+    font-family: "Irish Grover";
+}
+
+.oval p {
+    padding-top: 35px;
+}
+
+#Irish {
+    font-size: 55px;
+}
+
+#no_padding {
+    padding-left: 45px;
+}
+
+button.doublef1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E592E;
+    box-shadow: inset 5px 5px 20px #0b301b;
+    font-size: 50px;
+    border: 1px solid #0b301b;
+    border-radius: 10px;
+    width: 155px;
+    height: 45px;
+    font-family: "Italianno";
+    color: white;
+    margin: 20px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: -830px;
+    right: 0px;
+}
+
+button.doublef2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E592E;
+    box-shadow: inset 5px 5px 20px #0b301b;
+    font-size: 50px;
+    border: 1px solid #0b301b;
+    border-radius: 10px;
+    width: 155px;
+    height: 45px;
+    font-family: "Italianno";
+    color: white;
+    margin: 20px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: -885px;
+    right: 0px;
+}
+
+button.doublef1:hover, button.doublef2:hover {
+    border: 1px solid white;
+}
