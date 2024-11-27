@@ -21,6 +21,8 @@ body {
     font-style: normal;
 }  
 
+/* HEADER */
+
 header .logo {
     display: flex;
     align-items: center;
@@ -96,6 +98,9 @@ header ul li {
     padding-left: 45px;
 }
 
+
+/* GOMBOK */
+
 button.doublef1 {
     display: flex;
     justify-content: center;
@@ -140,11 +145,21 @@ button.doublef1:hover, button.doublef2:hover {
     border: 1px solid white;
 }
 
+
+/* JÁTÉK */
+
 .table {
     position: absolute;
     bottom: -880px;
     right: 460px;
     width: 1000px;
+}
+
+.chair {
+    position: absolute;
+    bottom: -650px;
+    right: 350px;
+    width: 1200px;
 }
 
 .pognarbal {
@@ -153,6 +168,23 @@ button.doublef1:hover, button.doublef2:hover {
     right: 840px;
     width: 260px;
 }
+
+.slomesz {
+    position: absolute;
+    bottom: -410px;
+    right: 820px;
+    width: 250px;
+}
+
+.slodos {
+    position: absolute;
+    bottom: -360px;
+    right: 840px;
+    width: 260px;
+}
+
+
+/* SZÍVEK */
 
 .dealerheartbox {
     position: absolute;
@@ -170,23 +202,6 @@ button.doublef1:hover, button.doublef2:hover {
     left: 10px;
 }
 
-.slomesz {
-    position: absolute;
-    bottom: -410px;
-    right: 820px;
-    width: 250px;
-}
 
-.slodos {
-    position: absolute;
-    bottom: -360px;
-    right: 840px;
-    width: 260px;
-}
 
-.chair {
-    position: absolute;
-    bottom: -650px;
-    right: 350px;
-    width: 1200px;
-}
+
