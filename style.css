@@ -117,7 +117,7 @@ button.doublef1 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -1875%;
+    bottom: -1650%;
     right: 0%;
 }
 
@@ -137,7 +137,7 @@ button.doublef2 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -2045%;
+    bottom: -1820%;
     right: 0%;
 }
 
@@ -150,35 +150,35 @@ button.doublef1:hover, button.doublef2:hover {
 
 .table {
     position: absolute;
-    bottom: -1960%;
-    right: 22%;
-    width: 1050px;
+    bottom: -1760%;
+    right: 25%;
+    width: 980px;
 }
 
 .chair {
     position: absolute;
-    top: 80%;
+    top: 40%;
     right: 18%;
     width: 1200px;
 }
 
 .pognarbal {
     position: absolute;
-    top: 200%;
+    top: 160%;
     right: 42.8%;
     width: 280px;
 }
 
 .slomesz {
     position: absolute;
-    top: 200%;
+    top: 180%;
     right: 42%;
     width: 250px;
 }
 
 .slodos {
     position: absolute;
-    top: 240%;
+    top: 170%;
     right: 43.7%;
     width: 260px;
 }
@@ -197,7 +197,7 @@ button.doublef1:hover, button.doublef2:hover {
 
 .ourheartbox {
     position: absolute;
-    bottom: -2045%;
+    bottom: -1814%;
 }
 
 
@@ -205,19 +205,7 @@ button.doublef1:hover, button.doublef2:hover {
 
 .lostW1 {
     right: 37%;
-    top: 700%;
-    position: absolute;
-    background-color: #0E592E;
-    border: 1px solid #0E592E;
-    border-radius: 40px;
-    width: 500px;
-    height: 350px;
-    box-shadow: 5px 5px 30px black;
-}
-
-.lostW2 {
-    right: 37%;
-    top: 700%;
+    top: 630%;
     position: absolute;
     background-color: #0E592E;
     border: 1px solid #0E592E;
@@ -226,6 +214,18 @@ button.doublef1:hover, button.doublef2:hover {
     height: 350px;
     box-shadow: 5px 5px 30px black;
     opacity: 0;
+}
+
+.lostW2 {
+    right: 37%;
+    top: 630%;
+    position: absolute;
+    background-color: #0E592E;
+    border: 1px solid #0E592E;
+    border-radius: 40px;
+    width: 500px;
+    height: 350px;
+    box-shadow: 5px 5px 30px black;
 }
 
 .oval2 {
