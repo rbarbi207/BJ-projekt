@@ -117,8 +117,8 @@ button.doublef1 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -940px;
-    right: 0px;
+    bottom: -1875%;
+    right: 0%;
 }
 
 button.doublef2 {
@@ -137,8 +137,8 @@ button.doublef2 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -1020px;
-    right: 0px;
+    bottom: -2045%;
+    right: 0%;
 }
 
 button.doublef1:hover, button.doublef2:hover {
@@ -150,36 +150,36 @@ button.doublef1:hover, button.doublef2:hover {
 
 .table {
     position: absolute;
-    bottom: -980px;
-    right: 430px;
+    bottom: -1960%;
+    right: 22%;
     width: 1050px;
 }
 
 .chair {
     position: absolute;
-    bottom: -665px;
-    right: 345px;
+    top: 80%;
+    right: 18%;
     width: 1200px;
 }
 
 .pognarbal {
     position: absolute;
-    bottom: -410px;
-    right: 820px;
+    top: 200%;
+    right: 42.8%;
     width: 280px;
 }
 
 .slomesz {
     position: absolute;
-    bottom: -410px;
-    right: 820px;
+    top: 200%;
+    right: 42%;
     width: 250px;
 }
 
 .slodos {
     position: absolute;
-    bottom: -410px;
-    right: 840px;
+    top: 240%;
+    right: 43.7%;
     width: 260px;
 }
 
@@ -188,8 +188,7 @@ button.doublef1:hover, button.doublef2:hover {
 
 .dealerheartbox {
     position: absolute;
-    bottom: -80px;
-    right: 2px;
+    right: 0%;
 }
 
 .heart {
@@ -198,10 +197,98 @@ button.doublef1:hover, button.doublef2:hover {
 
 .ourheartbox {
     position: absolute;
-    bottom: -1020px;
-    left: 10px;
+    bottom: -2045%;
 }
 
 
+/* KIÍRÁS */
 
+.lostW1 {
+    right: 37%;
+    top: 700%;
+    position: absolute;
+    background-color: #0E592E;
+    border: 1px solid #0E592E;
+    border-radius: 40px;
+    width: 500px;
+    height: 350px;
+    box-shadow: 5px 5px 30px black;
+}
 
+.lostW2 {
+    right: 37%;
+    top: 700%;
+    position: absolute;
+    background-color: #0E592E;
+    border: 1px solid #0E592E;
+    border-radius: 40px;
+    width: 500px;
+    height: 350px;
+    box-shadow: 5px 5px 30px black;
+    opacity: 0;
+}
+
+.oval2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0E592E;
+    width: 300px;
+    font-family: "Irish Grover";
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    font-size: 32px;
+    color: white;
+    left: 20%;
+    bottom: 10%;
+}
+
+.text {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Irish Grover";
+    color: white;
+}
+
+button.yes {
+    color: black;
+    font-family: "Irish Grover";
+    background-color: #0E592E;
+    border: 1px solid #0E592E;  
+    font-size: 45px;
+    position: absolute;
+    left: 10%;
+    width: 150px;
+    height: 60px;
+}
+
+button.no {
+    color: black;
+    font-family: "Irish Grover";
+    background-color: #0E592E;
+    border: 1px solid #0E592E;
+    font-size: 45px;
+    position: absolute;
+    right: 10%;
+    width: 150px;
+    height: 60px;
+}
+
+button.yes:hover {
+    background-color: #0E592E;
+    border: 1px solid #0b301b;
+    box-shadow: inset 5px 5px 30px #0b301b;
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+}
+
+button.no:hover {
+    background-color: #0E592E;
+    border: 1px solid #0b301b;
+    box-shadow: inset 5px 5px 30px #0b301b;
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+}
