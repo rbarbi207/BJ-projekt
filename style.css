@@ -79,7 +79,7 @@ header ul li {
     justify-content: center;
     background-color: #0E592E;
     width: 1300px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 20px -10px black;
     font-family: "Irish Grover";
     height: 120px;
     border-radius: 50%;
@@ -117,7 +117,7 @@ button.doublef1 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -830px;
+    bottom: -940px;
     right: 0px;
 }
 
@@ -137,7 +137,7 @@ button.doublef2 {
     margin: 20px;
     padding-top: 10px;
     position: absolute;
-    bottom: -910px;
+    bottom: -1020px;
     right: 0px;
 }
 
@@ -150,23 +150,23 @@ button.doublef1:hover, button.doublef2:hover {
 
 .table {
     position: absolute;
-    bottom: -880px;
-    right: 460px;
-    width: 1000px;
+    bottom: -980px;
+    right: 430px;
+    width: 1050px;
 }
 
 .chair {
     position: absolute;
-    bottom: -650px;
-    right: 350px;
+    bottom: -665px;
+    right: 345px;
     width: 1200px;
 }
 
 .pognarbal {
     position: absolute;
-    bottom: -360px;
-    right: 840px;
-    width: 260px;
+    bottom: -410px;
+    right: 820px;
+    width: 280px;
 }
 
 .slomesz {
@@ -178,7 +178,7 @@ button.doublef1:hover, button.doublef2:hover {
 
 .slodos {
     position: absolute;
-    bottom: -360px;
+    bottom: -410px;
     right: 840px;
     width: 260px;
 }
@@ -198,7 +198,7 @@ button.doublef1:hover, button.doublef2:hover {
 
 .ourheartbox {
     position: absolute;
-    bottom: -905px;
+    bottom: -1020px;
     left: 10px;
 }
 
