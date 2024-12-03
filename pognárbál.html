@@ -28,42 +28,35 @@
             </nav>
         </div>
     </header>
-    <div class="opacity">
-        <img class="pognarbal" src="pictures/pognár_bál_cropped.png">
-        <img class="table" src="pictures/asztal.png">
-        <button class="doublef1"><p>Duplázom</p></button>
-        <button class="doublef2"><p>Feladom</p></button>
-        <div class="dealerheartbox">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-        </div>
-        <div class="ourheartbox">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-            <img class="heart" src="pictures/szív.png" alt="">
-        </div>
+    <img class="pognarbal" src="pictures/pognár_bál_cropped.png">
+    <img class="table" src="pictures/asztal.png">
+    <button class="doublef1" onclick="Double()"><p>Duplázom</p></button>
+    <button class="doublef2" onclick="Giveup()"><p>Feladom</p></button>
+    <div class="dealerheartbox">
+        <span id="opponentLives2" style="display: none;">5</span>
+        <div id="opponentHearts" class="lives"></div>
     </div>
-    <div class="lostW1">
-        <div class="oval2"><h2>Nyertél!</h2></div>
-        <p class="text">
+    <div class="ourheartbox">
+        <span id="playerLives" style="display: none;">5</span>
+        <div id="playerHearts" class="lives"></div>
+    </div>
+    
+    <!-- <div id="modal" class="lostW1">
+        <div class="oval2"><h2 id="modalTitle">Nyertél!</h2></div>
+        <p class="text" id="modalMessage">
             Szeretnél tovább menni a következő szintre?
         </p>
-        <button class="yes">Igen</button>
-        <button class="no">Nem</button>
+        <button class="next">Igen</button>
+        <button class="cancel">Nem</button>
     </div>
     <div class="lostW2">
         <div class="oval2"><h2>Vesztettél!</h2></div>
         <p class="text">
             Szeretnéd újra megpróbálni ezt a szintet?
         </p>
-        <button class="yes">Igen</button>
-        <button class="no">Nem</button>
-    </div>
-    <script src="script.js"></script>
+        <button class="retry">Igen</button>
+        <button class="cancel">Nem</button>
+    </div> -->
+    <script src="pognar.js"></script>
 </body>
 </html>

@@ -32,20 +32,16 @@
     </header>
     <img class="slomesz" src="pictures/cropped_slomesz.png">
     <img class="table" src="pictures/asztal.png">
-    <button class="doublef1"><p>Duplázom</p></button>
-    <button class="doublef2"><p>Feladom</p></button>
+    <button class="doublef1" onclick="Double()"><p>Duplázom</p></button>
+    <button class="doublef2" onclick="Giveup()"><p>Feladom</p></button>
     <div class="dealerheartbox">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
+        <span id="opponentLives3" style="display: none;">3</span>
+        <div id="opponentHearts" class="lives"></div>
     </div>
     <div class="ourheartbox">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
+        <span id="playerLives" style="display: none;">5</span>
+        <div id="playerHearts" class="lives"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="slomesz.js"></script>
 </body>
 </html>

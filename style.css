@@ -78,12 +78,13 @@ header ul li {
     align-items: center;
     justify-content: center;
     background-color: #0E592E;
-    width: 1300px;
+    width: 500px;
     box-shadow: 0px 10px 20px -10px black;
     font-family: "Irish Grover";
     height: 120px;
     border-radius: 50%;
-    position: relative;
+    position: fixed;
+    left: 37%;
 }
 
 .oval p {
@@ -116,8 +117,8 @@ button.doublef1 {
     color: white;
     margin: 20px;
     padding-top: 10px;
-    position: absolute;
-    bottom: -1650%;
+    position: fixed;
+    bottom: 8%;
     right: 0%;
 }
 
@@ -136,8 +137,8 @@ button.doublef2 {
     color: white;
     margin: 20px;
     padding-top: 10px;
-    position: absolute;
-    bottom: -1820%;
+    position: fixed;
+    bottom: 0%;
     right: 0%;
 }
 
@@ -149,36 +150,36 @@ button.doublef1:hover, button.doublef2:hover {
 /* JÁTÉK */
 
 .table {
-    position: absolute;
-    bottom: -1760%;
+    position: fixed;
+    bottom: 3%;
     right: 25%;
     width: 980px;
 }
 
 .chair {
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    top: 2%;
     right: 18%;
     width: 1200px;
 }
 
 .pognarbal {
-    position: absolute;
-    top: 160%;
+    position: fixed;
+    top: 8%;
     right: 42.8%;
     width: 280px;
 }
 
 .slomesz {
-    position: absolute;
-    top: 180%;
+    position: fixed;
+    top: 9%;
     right: 42%;
     width: 250px;
 }
 
 .slodos {
-    position: absolute;
-    top: 170%;
+    position: fixed;
+    top: 8%;
     right: 43.7%;
     width: 260px;
 }
@@ -191,22 +192,49 @@ button.doublef1:hover, button.doublef2:hover {
     right: 0%;
 }
 
+.lives {
+    display: flex;
+    justify-content: center;
+}
+
 .heart {
-    width: 70px;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+
+.heart.half {
+    width: 65px;
+    height: 60px;
+}
+
+.heart.empty {
+    width: 50px;
+    height: 45px;
+    margin-top: 9px !important;
+}
+
+.lives img {
+    width: 60px;
+    height: 60px;
 }
 
 .ourheartbox {
-    position: absolute;
-    bottom: -1814%;
+    position: fixed;
+    bottom: 0%; 
+}
+
+#playerLives, #opponentLives1, #opponentLives2, #opponentLives3 {
+    opacity: 0;
 }
 
 
 /* KIÍRÁS */
 
 .lostW1 {
-    right: 37%;
-    top: 630%;
-    position: absolute;
+    top: 35%;
+    left: 36%;
+    position: fixed;
     background-color: #0E592E;
     border: 1px solid #0E592E;
     border-radius: 40px;
@@ -217,9 +245,9 @@ button.doublef1:hover, button.doublef2:hover {
 }
 
 .lostW2 {
-    right: 37%;
-    top: 630%;
-    position: absolute;
+    top: 35%;
+    left: 36%;
+    position: fixed;
     background-color: #0E592E;
     border: 1px solid #0E592E;
     border-radius: 40px;

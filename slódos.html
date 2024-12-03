@@ -31,24 +31,16 @@
     <img class="chair" src="pictures/szék.png">
     <img class="slodos" src="pictures/slódos_cropped.png">
     <img class="table" src="pictures/asztal.png">
-    <button class="doublef1"><p>Duplázom</p></button>
-    <button class="doublef2"><p>Feladom</p></button>
+    <button class="doublef1" onclick="Double()"><p>Duplázom</p></button>
+    <button class="doublef2" onclick="Giveup()"><p>Feladom</p></button>
     <div class="dealerheartbox">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
+        <span id="opponentLives1" style="display: none;">7</span>
+        <div id="opponentHearts" class="lives"></div>
     </div>
     <div class="ourheartbox">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
-        <img class="heart" src="pictures/szív.png" alt="">
+        <span id="playerLives" style="display: none;">5</span>
+        <div id="playerHearts" class="lives"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="slodos.js"></script>
 </body>
 </html>
