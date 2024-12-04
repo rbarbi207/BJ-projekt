@@ -111,6 +111,153 @@ header ul li {
 }
 
 
+/* FŐOLDAL */
+
+.levels {
+    color: white;
+    background-color: #0E592E;
+    width: 600px;
+    height: 720px;
+    border: 1px solid #0E592E;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 8%;
+    left: 10%;
+    cursor: default;
+}
+
+.levels #underline {
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 70px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.levels p {
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.levels ul li{
+    list-style-type: none;
+    font-size: 35px;
+}
+
+.levels img {
+    float: right;
+    width: 110px;
+    margin: 20px 70px 20px 20px;
+}
+
+.levels #főslomesz {
+    height: 150px;
+}
+
+.Nehéz {
+    background-color: #106937;
+    width: 540px;
+    height: 180px;
+    border: 1px solid #106937;
+    border-radius: 10px;
+    margin: 0 auto 25px auto;
+    box-shadow: 7px 7px 20px -7px black;
+}
+
+.Közepes {
+    width: 540px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 25px auto;
+}
+
+.Könnyű {
+    background-color: #106937;
+    width: 540px;
+    height: 180px;
+    border: 1px solid #106937;
+    border-radius: 10px;
+    margin: 25px auto;
+    box-shadow: 7px 7px 20px -7px black;
+}
+
+.rules {
+    position: fixed;
+    bottom: 5%;
+    width: 770px;
+    color: white;
+    right: 9%;
+    text-align: justify;
+}
+
+.rules ul li {
+    list-style-type: none;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 46px;
+    cursor: default;
+}
+
+#szabaly p{
+    margin-top: 100px;
+    font-size: 60px;
+    cursor: default;
+}
+
+.rules #rules {
+    position: fixed;
+    top: 16%;
+    margin-top: 5px;
+    margin-left: -20px;
+    font-size: 70px;
+    cursor: default;
+}
+
+.rules button {
+    margin-top: 30px;
+    width: 200px;
+    height: 45px;
+    background-color: #0E592E;
+    box-shadow: inset 5px 5px 20px #0b301b;
+    font-size: 35px;
+    border: 1px solid #0b301b;
+    border-radius: 10px;
+    font-family: "Italianno";
+    color: white;
+}
+
+.rules button:hover {
+    border: 1px solid white;
+    background-color: #0b301b;
+    box-shadow: inset 10px 10px 30px #0E592E;
+    cursor: pointer;
+}
+
+button.Vissza img {
+    width: 40px;
+    rotate: 90deg;
+    float: left;
+}
+
+button.Vissza {
+    margin-left: 60px;
+}
+
+button.Tovabb {
+    margin-left: 307px;
+}
+
+button.Tovabb p, button.Vissza p {
+    margin-top: 3px;    
+}
+
+button.Tovabb img {
+    width: 40px;
+    rotate: 270deg;
+    float: right;
+}
+
 /* GOMBOK */
 
 button.doublef1 {

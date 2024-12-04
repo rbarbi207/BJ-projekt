@@ -28,6 +28,46 @@
             </nav>
         </div>
     </header>
+    <div class="levels">
+        <p id="underline">Nehézségek:</p>
+        <div class="Nehéz">
+            <img src="pictures/slódos_cropped.png" id="főslódos">
+            <p>Nehéz:</p>
+            <ul>
+                <li>-7 Élet</li>
+                <li>-Slódos, a slosztó ellen</li>
+            </ul>
+        </div>
+        <div class="Közepes">
+            <img src="pictures/pognár_bál_cropped.png" id="főpognár">
+            <p>Közepes:</p>
+            <ul>
+                <li>-5 Élet</li>
+                <li>-Pognár Bál ellen</li>
+            </ul>
+        </div>
+        <div class="Könnyű">
+            <img src="pictures/cropped_slomesz.png" id="főslomesz">
+            <p>Könnyű:</p>
+            <ul>
+                <li>-3 Élet</li>
+                <li>-Slomesz ellen</li>
+            </ul>
+        </div>
+    </div>
+    <div class="rules">
+        <p id="rules">Szabályok:</p>
+        <ul id="szabaly">
+            <li>
+                A blackjack minden leosztásában a cél az osztó megverése. Ehhez olyan lapodnakkell lennie, ami magasabb az osztó lapjánál, de összességében nem haladja meg a21-et. Emellett akkor is nyerhetsz, ha 22-nél alacsonyabb értékű lapod van, ésaz osztó lapjának értéke meghaladja a 21-et. Ha a lapod teljes értéke 22 vagytöbb, azt általában „besokallás”-nak nevezik, és automatikusan vesztessz egyéletet. 
+            </li>
+            <li>
+                Amikor a kezed értéke megegyezik az osztóéval, azt „döntetlen”-nek hívják. Ha eztörténik, akkor senkisem veszít életet és kezdődik újra a kör. 
+            </li>
+        </ul>
+        <button class="Vissza" onclick="vissza()"><img src="pictures/arrow.png"><p>Vissza lapozol</p></button>
+        <button class="Tovabb" onclick="tovabb()"><img src="pictures/arrow.png"><p>Tovább lapozol</p></button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
