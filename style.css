@@ -537,3 +537,368 @@ button.retry:hover, button.cancel:hover, button.next:hover {
     50%{content: url(pictures/pikk\ 2.png);}
     100%{transform: rotateX(180deg); content: url(pictures/pikk\ 2.png);}
 }
+
+@keyframes pikk_harom {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 3.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 3.png);}
+}
+
+@keyframes pikk_negy {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 4.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 4.png);}
+}
+
+@keyframes pikk_ot {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 5.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 5.png);}
+}
+
+@keyframes pikk_hat {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 6.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 6.png);}
+}
+
+@keyframes pikk_het {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 7.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 7.png);}
+}
+
+@keyframes pikk_nyolc {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 8.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 8.png);}
+}
+
+@keyframes pikk_kilenc {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 9.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 9.png);}
+}
+
+@keyframes pikk_tiz {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ 10.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ 10.png);}
+}
+
+@keyframes pikk_asz {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ A.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ A.png);}
+}
+
+@keyframes pikk_jumbo {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ J.png.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ J.png);}
+}
+
+@keyframes pikk_kiraly {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ K.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ K.png);}
+}
+
+@keyframes pikk_dama {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/pikk\ Q.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/pikk\ Q.png);}
+}
+
+/*Káró*/
+
+
+@keyframes karo_ketto {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 2.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 2.png);}
+}
+
+@keyframes karo_harom{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 3.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 3.png);}
+}
+
+@keyframes karo_negy{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 4.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 4.png);}
+}
+
+@keyframes karo_ot{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 5.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 5.png);}
+}
+
+@keyframes karo_hat{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 6.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 6.png);}
+}
+
+@keyframes karo_het{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 7.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 7.png);}
+}
+
+@keyframes karo_nyolc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 8.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 8.png);}
+}
+
+@keyframes karo_kilenc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 9.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 9.png);}
+}
+
+@keyframes karo_tiz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ 10.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ 10.png);}
+}
+
+@keyframes karo_asz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ A.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ A.png);}
+}
+
+@keyframes karo_jumbo{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ J.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ J.png);}
+}
+
+@keyframes karo_kiraly{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ K.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ K.png);}
+}
+
+@keyframes karo_dama{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/káró\ Q.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/káró\ Q.png);}
+}
+
+
+/* Kör */
+
+@keyframes kor_ketto {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 2.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 2.png);}
+}
+
+@keyframes kor_harom{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 3.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 3.png);}
+}
+
+@keyframes kor_negy{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 4.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 4.png);}
+}
+
+@keyframes kor_ot{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 5.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 5.png);}
+}
+
+@keyframes kor_hat{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 6.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 6.png);}
+}
+
+@keyframes kor_het{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 7.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 7.png);}
+}
+
+@keyframes kor_nyolc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 8.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 8.png);}
+}
+
+@keyframes kor_kilenc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 9.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 9.png);}
+}
+
+@keyframes kor_tiz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ 10.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ 10.png);}
+}
+
+@keyframes kor_asz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ A.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ A.png);}
+}
+
+@keyframes kor_jumbo{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ J.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ J.png);}
+}
+
+@keyframes kor_kiraly{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ K.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ K.png);}
+}
+
+@keyframes kor_dama{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/kor\ Q.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/kor\ Q.png);}
+}
+
+/* Treff */
+
+@keyframes treff_ketto {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 2.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 2.png);}
+}
+
+@keyframes treff_harom{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 3.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 3.png);}
+}
+
+@keyframes treff_negy{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 4.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 4.png);}
+}
+
+@keyframes treff_ot{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 5.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 5.png);}
+}
+
+@keyframes treff_hat{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 6.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 6.png);}
+}
+
+@keyframes treff_het{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 7.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 7.png);}
+}
+
+@keyframes treff_nyolc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 8.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 8.png);}
+}
+
+@keyframes treff_kilenc{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 9.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 9.png);}
+}
+
+@keyframes treff_tiz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ 10.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ 10.png);}
+}
+
+@keyframes treff_asz{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ A.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ A.png);}
+}
+
+@keyframes treff_jumbo{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ J.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ J.png);}
+}
+
+@keyframes treff_kiraly{
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ K.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ K.png);}
+}
+
+@keyframes treff_dama {
+    0%{transform: rotateX(0deg); content: url(pictures/hátlap.png);}
+    49.99%{transform: rotateX(90deg); content: url(pictures/hátlap.png);}
+    50%{content: url(pictures/treff\ Q.png);}
+    100%{transform: rotateX(180deg); content: url(pictures/treff\ Q.png);}
+}
