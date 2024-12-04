@@ -69,8 +69,13 @@ header ul li {
     padding-top: 18px;
 }
 
+#pointer:hover {
+    cursor: pointer;
+}
+
 #black {
     color: black;
+    cursor: default;
 }
 
 .oval {
@@ -89,6 +94,7 @@ header ul li {
 
 .oval p {
     padding-top: 20px;
+    cursor: default;
 }
 
 #Irish {
@@ -97,6 +103,11 @@ header ul li {
 
 #no_padding {
     padding-left: 45px;
+    cursor: default;
+}
+
+#default {
+    cursor: default;
 }
 
 
@@ -120,6 +131,7 @@ button.doublef1 {
     position: fixed;
     bottom: 8%;
     right: 0%;
+    cursor: pointer;
 }
 
 button.doublef2 {
@@ -140,10 +152,34 @@ button.doublef2 {
     position: fixed;
     bottom: 0%;
     right: 0%;
+    cursor: pointer;
 }
 
-button.doublef1:hover, button.doublef2:hover {
+button.doublef1:hover, button.doublef2:hover, button.stop:hover {
     border: 1px solid white;
+    background-color: #0b301b;
+    box-shadow: inset 10px 10px 30px #0E592E;
+}
+
+button.stop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E592E;
+    box-shadow: inset 5px 5px 20px #0b301b;
+    font-size: 60px;
+    border: 1px solid #0b301b;
+    border-radius: 10px;
+    width: 180px;
+    height: 65px;
+    font-family: "Italianno";
+    color: white;
+    margin: 20px;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 4%;
+    right: 10%;
+    cursor: pointer;
 }
 
 
@@ -241,7 +277,6 @@ button.doublef1:hover, button.doublef2:hover {
     width: 500px;
     height: 350px;
     box-shadow: 5px 5px 30px black;
-    opacity: 0;
 }
 
 .lostW2 {
@@ -279,7 +314,7 @@ button.doublef1:hover, button.doublef2:hover {
     color: white;
 }
 
-button.yes {
+button.retry {
     color: black;
     font-family: "Irish Grover";
     background-color: #0E592E;
@@ -291,7 +326,19 @@ button.yes {
     height: 60px;
 }
 
-button.no {
+button.next {
+    color: black;
+    font-family: "Irish Grover";
+    background-color: #0E592E;
+    border: 1px solid #0E592E;  
+    font-size: 45px;
+    position: absolute;
+    left: 10%;
+    width: 150px;
+    height: 60px;
+}
+
+button.cancel {
     color: black;
     font-family: "Irish Grover";
     background-color: #0E592E;
@@ -303,20 +350,29 @@ button.no {
     height: 60px;
 }
 
-button.yes:hover {
-    background-color: #0E592E;
+button.retry:hover, button.cancel:hover, button.next:hover {
     border: 1px solid #0b301b;
-    box-shadow: inset 5px 5px 30px #0b301b;
+    background-color: #0b301b;
     border-radius: 10px;
     width: 150px;
     height: 60px;
+    border: 1px solid white;
+    background-color: #0b301b;
+    box-shadow: inset 10px 10px 30px #0E592E;
 }
 
-button.no:hover {
-    background-color: #0E592E;
-    border: 1px solid #0b301b;
-    box-shadow: inset 5px 5px 30px #0b301b;
-    border-radius: 10px;
-    width: 150px;
-    height: 60px;
+
+/* Kártyák */
+
+.deckcard {
+    position: fixed;
+    width: 90px;
+    border: 1px solid white;
+    border-radius: 5px;
+    bottom: 24%;
+    right: 32%;
+}
+
+.deckcard:hover {
+    cursor: pointer;
 }

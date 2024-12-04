@@ -23,17 +23,20 @@
         <div>
             <nav>
                 <ul>
-                    <a href="slódos.html"><li id="no_padding">Nehéz</li></a>
-                    <a href="pognárbál.html"><li>Közepes</li></a>
-                    <a href="slomesz.html" id="black"><li>Könnyű</li></a>
+                    <li id="no_padding">Nehéz</li>
+                    <li id="default">Közepes</li>
+                    <li id="black">Könnyű</li>
                 </ul>
             </nav>
         </div>
     </header>
     <img class="slomesz" src="pictures/cropped_slomesz.png">
     <img class="table" src="pictures/asztal.png">
+    <img class="deckcard" src="pictures/hátlap.png" onclick="Card()">
     <button class="doublef1" onclick="Double()"><p>Duplázom</p></button>
     <button class="doublef2" onclick="Giveup()"><p>Feladom</p></button>
+    <button class="stop" onclick="Stop()"><p>Megállok</p></button>
+
     <div class="dealerheartbox">
         <span id="opponentLives3" style="display: none;">3</span>
         <div id="opponentHearts" class="lives"></div>
@@ -42,6 +45,23 @@
         <span id="playerLives" style="display: none;">5</span>
         <div id="playerHearts" class="lives"></div>
     </div>
-    <script src="slomesz.js"></script>
+
+    <div class="lostW1" style="display: none;">
+        <div class="oval2"><h2>Nyertél!</h2></div>
+        <p class="text">
+            Szeretnél tovább menni a következő szintre?
+        </p>
+        <a href="pognárbál.html"><button class="next">Igen</button></a>
+        <a href="blackjack.html"><button class="cancel">Nem</button></a>
+    </div>
+    <div class="lostW2" style="display: none;">
+        <div class="oval2"><h2>Vesztettél!</h2></div>
+        <p class="text">
+            Szeretnéd újra megpróbálni ezt a szintet?
+        </p>
+        <a href="slomesz.html"><button class="retry">Igen</button></a>
+        <a href="blackjack.html"><button class="cancel">Nem</button></a>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

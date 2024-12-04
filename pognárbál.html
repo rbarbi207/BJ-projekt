@@ -21,17 +21,19 @@
         <div>
             <nav>
                 <ul>
-                    <a href="slódos.html"><li id="no_padding">Nehéz</li></a>
-                    <a href="pognárbál.html" id="black"><li>Közepes</li></a>
-                    <a href="slomesz.html"><li>Könnyű</li></a>
+                    <li id="no_padding">Nehéz</li>
+                    <li id="black">Közepes</li>
+                    <li id="default">Könnyű</li>
                 </ul>
             </nav>
         </div>
     </header>
     <img class="pognarbal" src="pictures/pognár_bál_cropped.png">
     <img class="table" src="pictures/asztal.png">
+    <img class="deckcard" src="pictures/hátlap.png" onclick="Card()">
     <button class="doublef1" onclick="Double()"><p>Duplázom</p></button>
     <button class="doublef2" onclick="Giveup()"><p>Feladom</p></button>
+    <button class="stop" onclick="Stop()"><p>Megállok</p></button>
     <div class="dealerheartbox">
         <span id="opponentLives2" style="display: none;">5</span>
         <div id="opponentHearts" class="lives"></div>
@@ -41,22 +43,22 @@
         <div id="playerHearts" class="lives"></div>
     </div>
     
-    <!-- <div id="modal" class="lostW1">
-        <div class="oval2"><h2 id="modalTitle">Nyertél!</h2></div>
-        <p class="text" id="modalMessage">
+    <div class="lostW1" style="display: none;">
+        <div class="oval2"><h2>Nyertél!</h2></div>
+        <p class="text">
             Szeretnél tovább menni a következő szintre?
         </p>
-        <button class="next">Igen</button>
-        <button class="cancel">Nem</button>
+        <a href="slódos.html"><button class="next">Igen</button></a>
+        <a href="blackjack.html"><button class="cancel">Nem</button></a>
     </div>
-    <div class="lostW2">
+    <div class="lostW2" style="display: none;">
         <div class="oval2"><h2>Vesztettél!</h2></div>
         <p class="text">
             Szeretnéd újra megpróbálni ezt a szintet?
         </p>
-        <button class="retry">Igen</button>
-        <button class="cancel">Nem</button>
-    </div> -->
-    <script src="pognar.js"></script>
+        <a href="pognárbál.html"><button class="retry">Igen</button></a>
+        <a href="blackjack.html"><button class="cancel">Nem</button></a>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
