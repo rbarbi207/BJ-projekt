@@ -414,7 +414,7 @@ button.stop {
 
 /* KIÍRÁS */
 
-.lostW1 {
+.win {
     top: 35%;
     left: 36%;
     position: fixed;
@@ -426,7 +426,7 @@ button.stop {
     box-shadow: 5px 5px 30px black;
 }
 
-.lostW2 {
+.lose {
     top: 35%;
     left: 36%;
     position: fixed;
@@ -524,9 +524,29 @@ button.retry:hover, button.cancel:hover, button.next:hover {
     cursor: pointer;
 }
 
-@keyframes odamegy{
-    0%{right: 32%}
-    100%{right: 70%}
+@keyframes odamegy1{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 65%; bottom: 15%;}
+}
+
+@keyframes odamegy2{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 63%; bottom: 16%;}
+}
+
+@keyframes odamegy3{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 61%; bottom: 17%;}
+}
+
+@keyframes odamegy4{
+    0%{right: 32%; bottom: 24%}
+    100%{right: 59%; bottom: 18%;}
+}
+
+@keyframes odamegy5{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 57%; bottom: 19%;}
 }
 
 /*A neve mindig olyan legyen, hogy először a szín (pikk, treff, karo, kor), aztán a szám aláhúzással elválaszva (_ketto, _jumbo, _dama, _kiraly, _asz, ...)*/

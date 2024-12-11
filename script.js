@@ -2,14 +2,18 @@ const lapok = [false, false, false, false, false, false, false, false, false, fa
 // - volt-e már használva az adott lap
 
 let sajat_eletek = 10;
-let slomesz_eletek = 6;
+let sajat_eletek_max = 10;
+let ellenfel_eletek = 6;
+let ellenfel_eletek_max = 6;
+/*let slomesz_eletek = 6;
 let pognarbal_eletek = 10;
-let slodos_eletek = 14;
+let slodos_eletek = 14;*/
 
 let sajat_kartyaosszeg = 0;
-let slomesz_kartyaosszeg = 0;
+let ellenfel_kartyaosszeg = 0;
+/*let slomesz_kartyaosszeg = 0;
 let pognarbal_kartyaosszeg = 0;
-let slodos_kartyaosszeg = 0;
+let slodos_kartyaosszeg = 0;*/
 
 let sajat_kartya_darabszam = 0;
 let ellenfel_kartya_darabszam = 0;
@@ -17,8 +21,12 @@ let ellenfel_kartya_darabszam = 0;
 let duplazva = false;
 let jelenlegi_ellenfel = "slomesz";
 let megallt = false;
-let ellenfel_asz = false;
-let sajat_asz = false;
+let ellenfel_asz = 0;
+let sajat_asz = 0;
+
+const egesz_sziv = "pictures/szív.png";
+const fel_sziv = "pictures/fél_szív.png";
+const ures_sziv = "pictures/empty_szív.png";
 
 /*  animation-fill-mode: forwards; - nem megy vissza az animáció az eredeti helyére*/
 
@@ -32,12 +40,23 @@ function Giveup(){
     }else{
         sajat_eletek -= 1;
     }
+    Delete_cards();
+    Szivek_kiirasa();
 
 }
 
 function Stop(){
     megallt = true;
 }
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }
 
 function Card(){
     if(!megallt){
@@ -57,12 +76,13 @@ function Card(){
         uj.style.right = "32%";
         uj.style.bottom = "24%";
         uj.setAttribute("id", "kartya");
-        let animations = "odamegy, ";
-
+        let animations = "odamegy" + (sajat_kartya_darabszam+1).toString() + " ,";        
         sajat_kartya_darabszam++;
-        sajat_kartyaosszeg += Math.min(uj_kartya_szam + 2 , 10);
         if(uj_kartya_szam == 12){
-            sajat_asz = true;
+            sajat_asz++;
+            sajat_kartyaosszeg += 11;
+        }else{
+            sajat_kartyaosszeg += Math.min(uj_kartya_szam + 2 , 10);
         }
 
         switch (uj_kartya_szin) {
@@ -137,13 +157,79 @@ function Card(){
 
         }
         uj.style.animationName = animations;
-        uj.style.animationDuration = "4s";
+        uj.style.animationDuration = "2s";
         uj.style.animationFillMode = "forwards";
         document.body.appendChild(uj);
-        vege_van_e();
+        if(sajat_kartyaosszeg > 21 && sajat_asz == 0){
+            if(duplazva){
+                sajat_eletek -= 4;
+            }else{
+                sajat_eletek -= 2;
+            }
+            sajat_kartyaosszeg = 0;
+            setTimeout(() => {  Delete_cards(); }, 3000);
+            setTimeout(() => {  sajat_kartya_darabszam = 0; }, 3000);
+            /*sleep(3000);
+            Delete_cards();
+            sajat_kartyaosszeg = 0;*/
+        }else if(sajat_kartyaosszeg > 21 && sajat_asz > 0){
+            sajat_kartyaosszeg -= 10;
+            sajat_asz--;
+        }
+        
+        Szivek_kiirasa();
     }
 
 }
+
+
+function Szivek_kiirasa(){
+    let sajat_szivek = document.getElementById("playerHearts");
+    let ellenfel_szivek = document.getElementById("opponentHearts");
+
+    ellenfel_szivek.innerHTML = ""
+    for(let i=0;i<Math.floor(ellenfel_eletek);i++){
+        ellenfel_szivek.innerHTML += '<img src="' + egesz_sziv + '">';
+    }
+    if(ellenfel_eletek % 2){
+        ellenfel_szivek.innerHTML += '<img src="' + fel_sziv + '">';
+    }
+    for(let i = 0;i<Math.floor(ellenfel_eletek_max - ellenfel_eletek);i++){
+        ellenfel_szivek.innerHTML += '<img src="' + ures_sziv + '">';
+    }
+
+    sajat_szivek.innerHTML = "";
+    for(let i=0;i<Math.floor(sajat_eletek/2);i++){
+        sajat_szivek.innerHTML += '<img src="' + egesz_sziv + '">';
+    }
+    if(sajat_eletek % 2){
+        sajat_szivek.innerHTML += '<img src="' + fel_sziv + '">';
+    }
+    for(let i = 0;i<Math.floor((sajat_eletek_max - sajat_eletek) / 2);i++){
+        sajat_szivek.innerHTML += '<img src="' + ures_sziv + '">';
+    }
+
+
+
+}
+
+function Delete_cards(){
+    for(let i = 0;i<sajat_kartya_darabszam + ellenfel_kartya_darabszam;i++){
+        const cards = document.getElementById("kartya");
+        cards.remove();
+    }
+}
+
+
+/*function Vege_van_e(){
+    
+}*/
+
+
+
+
+
+
 
 
 
@@ -188,4 +274,6 @@ function Card(){
        
     
     }
+
+
 }
