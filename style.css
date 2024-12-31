@@ -524,6 +524,45 @@ button.retry:hover, button.cancel:hover, button.next:hover {
     cursor: pointer;
 }
 
+/*A játékos kártyái: */
+
+@keyframes odamegy_oszto1{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 65%; bottom: 45%;}
+}
+
+@keyframes odamegy_oszto2{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 63%; bottom: 44%;}
+}
+
+@keyframes odamegy_oszto3{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 61%; bottom: 43%;}
+}
+
+@keyframes odamegy_oszto4{
+    0%{right: 32%; bottom: 24%}
+    100%{right: 59%; bottom: 42%;}
+}
+
+@keyframes odamegy_oszto5{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 57%; bottom: 41%;}
+}
+
+@keyframes odamegy_oszto6{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 55%; bottom: 40%;}
+}
+
+@keyframes odamegy_oszto7{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 53%; bottom: 39%;}
+}
+
+/*Az osztó kártyái: */
+
 @keyframes odamegy1{
     0%{right: 32%; bottom: 24%;}
     100%{right: 65%; bottom: 15%;}
@@ -548,6 +587,17 @@ button.retry:hover, button.cancel:hover, button.next:hover {
     0%{right: 32%; bottom: 24%;}
     100%{right: 57%; bottom: 19%;}
 }
+
+@keyframes odamegy6{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 55%; bottom: 20%;}
+}
+
+@keyframes odamegy7{
+    0%{right: 32%; bottom: 24%;}
+    100%{right: 53%; bottom: 21%;}
+}
+
 
 /*A neve mindig olyan legyen, hogy először a szín (pikk, treff, karo, kor), aztán a szám aláhúzással elválaszva (_ketto, _jumbo, _dama, _kiraly, _asz, ...)*/
 

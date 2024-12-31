@@ -28,7 +28,20 @@ const egesz_sziv = "pictures/szív.png";
 const fel_sziv = "pictures/fél_szív.png";
 const ures_sziv = "pictures/empty_szív.png";
 
+let harmadik_kartya_szam = "";
+let harmadik_kartya_szin = "";
+
 /*  animation-fill-mode: forwards; - nem megy vissza az animáció az eredeti helyére*/
+
+function Slomesz_start(){
+    //sleep(3000);
+    //console.log("Slomesz_start");
+    Szivek_kiirasa();
+    setTimeout(() => {Dealer_card();}, 1000);
+    setTimeout(() => {Card();}, 2000);
+    setTimeout(() => {Third_card();}, 3000);
+    setTimeout(() => {Card();}, 4000);
+}
 
 function Double(){
     duplazva = true;
@@ -45,18 +58,104 @@ function Giveup(){
 
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+
 function Stop(){
     megallt = true;
+    let animations = "";
+    switch (harmadik_kartya_szin) {
+        case 0:
+            animations += "treff_";
+            break;
+        case 1:
+            animations += "karo_";
+            break;
+    
+        case 2:
+            animations += "kor_";
+            break;
+
+        case 3:
+            animations += "pikk_";
+            break;
+    }
+
+    switch (harmadik_kartya_szam) {
+        case 0:
+            animations += "ketto";
+            break;
+
+        case 1:
+            animations += "harom";
+            break;
+    
+        case 2:
+            animations += "negy";
+            break;
+
+        case 3:
+            animations += "ot";
+            break;
+
+        case 4:
+            animations += "hat";
+            break;
+
+        case 5:
+            animations += "het";
+            break;
+
+        case 6:
+            animations += "nyolc";
+            break;
+
+        case 7:
+            animations += "kilenc";
+            break;
+
+        case 8:
+            animations += "tiz";
+            break;
+
+        case 9:
+            animations += "jumbo";
+            break;
+
+        case 10:
+            animations += "dama";
+            break;
+
+        case 11:
+            animations += "kiraly";
+            break;
+
+        case 12:
+            animations += "asz";
+            break;
+
+    }
+
+    document.getElementById("harmadik").style.animationName += ", " + animations;
+
+
+    let delay = 1;
+    while(ellenfel_kartyaosszeg < 17 && ellenfel_kartyaosszeg < sajat_kartyaosszeg){
+        //setTimeout(() => {Dealer_card();}, delay * 1000);
+        sleep(1000).then(() => {Dealer_card();});
+        delay++;
+    }
+    console.log(ellenfel_kartyaosszeg);
+    
+    
+
+
+    
+
 }
 
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-      if ((new Date().getTime() - start) > milliseconds){
-        break;
-      }
-    }
-  }
 
 function Card(){
     if(!megallt){
@@ -167,8 +266,9 @@ function Card(){
                 sajat_eletek -= 2;
             }
             sajat_kartyaosszeg = 0;
+            ellenfel_kartyaosszeg = 0;
             setTimeout(() => {  Delete_cards(); }, 3000);
-            setTimeout(() => {  sajat_kartya_darabszam = 0; }, 3000);
+            setTimeout(() => {  sajat_kartya_darabszam = 0; ellenfel_kartya_darabszam = 0;}, 3000);
             /*sleep(3000);
             Delete_cards();
             sajat_kartyaosszeg = 0;*/
@@ -176,12 +276,151 @@ function Card(){
             sajat_kartyaosszeg -= 10;
             sajat_asz--;
         }
-        
-        Szivek_kiirasa();
+
+        setTimeout(() => {Szivek_kiirasa();}, 2000);
     }
 
 }
 
+function Dealer_card(){
+    let uj_kartya_szam = Math.floor(Math.random() * 13);    //2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
+    let uj_kartya_szin = Math.floor(Math.random() * 4);     //treff, káró, kör, pikk
+    while (lapok[uj_kartya_szin * 13 + uj_kartya_szam]) {
+        uj_kartya_szam = Math.floor(Math.random() * 13);
+        uj_kartya_szin = Math.floor(Math.random() * 4);
+    }
+    lapok[uj_kartya_szin * 13 + uj_kartya_szam] = true;
+    let uj = document.createElement("img");
+
+    uj.style.width = "91px";
+    uj.style.transform = "rotateZ(180deg)";
+    uj.src = "pictures/hátlap.png";
+    uj.style.position = "fixed";
+    uj.style.right = "32%";
+    uj.style.bottom = "24%";
+    uj.setAttribute("id", "kartya");
+    let animations = "odamegy_oszto" + (ellenfel_kartya_darabszam+1).toString() + " ,";        
+    ellenfel_kartya_darabszam++;
+    if(uj_kartya_szam == 12){
+        ellenfel_asz++;
+        ellenfel_kartyaosszeg += 11;
+    }else{
+        ellenfel_kartyaosszeg += Math.min(uj_kartya_szam + 2 , 10);
+    }
+
+    switch (uj_kartya_szin) {
+        case 0:
+            animations += "treff_";
+            break;
+        case 1:
+            animations += "karo_";
+            break;
+    
+        case 2:
+            animations += "kor_";
+            break;
+
+        case 3:
+            animations += "pikk_";
+            break;
+    }
+
+    switch (uj_kartya_szam) {
+        case 0:
+            animations += "ketto";
+            break;
+
+        case 1:
+            animations += "harom";
+            break;
+    
+        case 2:
+            animations += "negy";
+            break;
+
+        case 3:
+            animations += "ot";
+            break;
+
+        case 4:
+            animations += "hat";
+            break;
+
+        case 5:
+            animations += "het";
+            break;
+
+        case 6:
+            animations += "nyolc";
+            break;
+
+        case 7:
+            animations += "kilenc";
+            break;
+
+        case 8:
+            animations += "tiz";
+            break;
+
+        case 9:
+            animations += "jumbo";
+            break;
+
+        case 10:
+            animations += "dama";
+            break;
+
+        case 11:
+            animations += "kiraly";
+            break;
+
+        case 12:
+            animations += "asz";
+            break;
+
+    }
+    uj.style.animationName = animations;
+    uj.style.animationDuration = "2s";
+    uj.style.animationFillMode = "forwards";
+    document.body.appendChild(uj);
+
+}
+
+function Third_card(){
+    let uj_kartya_szam = Math.floor(Math.random() * 13);    //2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
+    let uj_kartya_szin = Math.floor(Math.random() * 4);     //treff, káró, kör, pikk
+    while (lapok[uj_kartya_szin * 13 + uj_kartya_szam]) {
+        uj_kartya_szam = Math.floor(Math.random() * 13);
+        uj_kartya_szin = Math.floor(Math.random() * 4);
+    }
+
+    harmadik_kartya_szam = uj_kartya_szam;
+    harmadik_kartya_szin = uj_kartya_szin;
+
+    lapok[uj_kartya_szin * 13 + uj_kartya_szam] = true;
+    let uj = document.createElement("img");
+
+    uj.style.width = "91px";
+    uj.style.transform = "rotateZ(180deg)";
+    uj.src = "pictures/hátlap.png"
+    uj.style.position = "fixed";
+    uj.style.right = "32%";
+    uj.style.bottom = "24%";
+    uj.setAttribute("id", "harmadik");
+    
+    let animations = "odamegy_oszto" + (ellenfel_kartya_darabszam+1).toString();        
+    ellenfel_kartya_darabszam++;
+    if(uj_kartya_szam == 12){
+        ellenfel_asz++;
+        ellenfel_kartyaosszeg += 11;
+    }else{
+        ellenfel_kartyaosszeg += Math.min(uj_kartya_szam + 2 , 10);
+    }
+    uj.style.animationName = animations;
+    uj.style.animationDuration = "2s";
+    uj.style.animationFillMode = "forwards";
+    document.body.appendChild(uj);
+}
 
 function Szivek_kiirasa(){
     let sajat_szivek = document.getElementById("playerHearts");
@@ -214,11 +453,16 @@ function Szivek_kiirasa(){
 }
 
 function Delete_cards(){
-    for(let i = 0;i<sajat_kartya_darabszam + ellenfel_kartya_darabszam;i++){
+    const harmadik = document.getElementById("harmadik");
+    harmadik.remove();
+    console.log(harmadik);
+    
+    for(let i = 0;i<sajat_kartya_darabszam + ellenfel_kartya_darabszam-1;i++){
         const cards = document.getElementById("kartya");
         cards.remove();
     }
 }
+
 
 
 /*function Vege_van_e(){
