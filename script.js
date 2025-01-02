@@ -19,7 +19,6 @@ let sajat_kartya_darabszam = 0;
 let ellenfel_kartya_darabszam = 0;
 
 let duplazva = false;
-let jelenlegi_ellenfel = "slomesz";
 let megallt = false;
 let ellenfel_asz = 0;
 let sajat_asz = 0;
@@ -33,14 +32,19 @@ let harmadik_kartya_szin = "";
 
 /*  animation-fill-mode: forwards; - nem megy vissza az animáció az eredeti helyére*/
 
-function Slomesz_start(){
-    //sleep(3000);
-    //console.log("Slomesz_start");
-    Szivek_kiirasa();
-    setTimeout(() => {Dealer_card();}, 1000);
-    setTimeout(() => {Card();}, 2000);
-    setTimeout(() => {Third_card();}, 3000);
-    setTimeout(() => {Card();}, 4000);
+function Start(sajat, ellenfel, ellenfel_max){
+    sajat_eletek = sajat;
+    ellenfel_eletek = ellenfel;
+    ellenfel_eletek_max = ellenfel_max;
+    console.log(sajat_eletek);
+    
+    setTimeout(() => {
+        Print_hearts();
+    }, 1000);
+    setTimeout(() => {Dealer_card(0);}, 1000);
+    setTimeout(() => {Card(0);}, 2000);
+    setTimeout(() => {Third_card(0);}, 3000);
+    setTimeout(() => {Card(0);}, 4000);
 }
 
 function Double(){
@@ -54,13 +58,13 @@ function Giveup(){
         sajat_eletek -= 1;
     }
     Delete_cards();
-    Szivek_kiirasa();
+    Print_hearts();
 
 }
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+}
 
 
 function Stop(){
@@ -144,13 +148,35 @@ function Stop(){
     let delay = 1;
     while(ellenfel_kartyaosszeg < 17 && ellenfel_kartyaosszeg < sajat_kartyaosszeg){
         //setTimeout(() => {Dealer_card();}, delay * 1000);
-        sleep(1000).then(() => {Dealer_card();});
+        // sleep(1000).then(() => {Dealer_card();});
+        Dealer_card(delay);
         delay++;
     }
-    console.log(ellenfel_kartyaosszeg);
-    
-    
 
+    if(ellenfel_kartyaosszeg == sajat_kartyaosszeg && ellenfel_kartya_darabszam == sajat_kartya_darabszam){
+        //döntetlen
+        Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
+    }else if(ellenfel_kartyaosszeg > 21 || ellenfel_kartyaosszeg < sajat_kartyaosszeg || (ellenfel_kartyaosszeg == sajat_kartyaosszeg && ellenfel_kartya_darabszam > sajat_kartya_darabszam)){
+        //osztó vesztett
+        if(duplazva) ellenfel_eletek = Math.max(0, ellenfel_eletek-4);
+        else ellenfel_eletek = Math.max(0, ellenfel_eletek-2);
+    }else{
+        //játékos vesztett
+        if(duplazva) sajat_eletek = Math.max(0, sajat_eletek-4);
+        else sajat_eletek = Math.max(0, sajat_eletek-2);
+    }
+
+    setTimeout(() => {
+        Delete_cards();
+    }, delay*1000 + 2000);
+    setTimeout(() => {
+        Print_hearts();
+    }, delay*1000 + 2000);
+
+    
+    setTimeout(() => {
+        Is_it_over();
+    }, delay*1000 + 2000);
 
     
 
@@ -259,16 +285,25 @@ function Card(){
         uj.style.animationDuration = "2s";
         uj.style.animationFillMode = "forwards";
         document.body.appendChild(uj);
-        if(sajat_kartyaosszeg > 21 && sajat_asz == 0){
+        if((sajat_kartyaosszeg > 21 && sajat_asz == 0) || (sajat_asz == 1 && sajat_kartyaosszeg-10 > 21)){
             if(duplazva){
-                sajat_eletek -= 4;
+                sajat_eletek = Math.max(0, sajat_eletek-4);
             }else{
-                sajat_eletek -= 2;
+                sajat_eletek = Math.max(0, sajat_eletek-2);
             }
             sajat_kartyaosszeg = 0;
             ellenfel_kartyaosszeg = 0;
+            megallt = false;
+            sajat_asz = 0;
+            ellenfel_asz = 0;
             setTimeout(() => {  Delete_cards(); }, 3000);
-            setTimeout(() => {  sajat_kartya_darabszam = 0; ellenfel_kartya_darabszam = 0;}, 3000);
+            setTimeout(() => { 
+                sajat_kartya_darabszam = 0; 
+                ellenfel_kartya_darabszam = 0;
+            }, 3000);
+            setTimeout(() => {
+                Is_it_over();
+            }, 3000);   
             /*sleep(3000);
             Delete_cards();
             sajat_kartyaosszeg = 0;*/
@@ -277,12 +312,13 @@ function Card(){
             sajat_asz--;
         }
 
-        setTimeout(() => {Szivek_kiirasa();}, 2000);
+        setTimeout(() => {Print_hearts();}, 2000);
+
     }
 
 }
 
-function Dealer_card(){
+function Dealer_card(delay){
     let uj_kartya_szam = Math.floor(Math.random() * 13);    //2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
     let uj_kartya_szin = Math.floor(Math.random() * 4);     //treff, káró, kör, pikk
     while (lapok[uj_kartya_szin * 13 + uj_kartya_szam]) {
@@ -306,6 +342,11 @@ function Dealer_card(){
         ellenfel_kartyaosszeg += 11;
     }else{
         ellenfel_kartyaosszeg += Math.min(uj_kartya_szam + 2 , 10);
+    }
+
+    if(ellenfel_kartyaosszeg > 21 && ellenfel_asz != 0 && ellenfel_kartyaosszeg-10 <= 21){
+        ellenfel_asz--;
+        ellenfel_kartyaosszeg -= 10;
     }
 
     switch (uj_kartya_szin) {
@@ -382,7 +423,9 @@ function Dealer_card(){
     uj.style.animationName = animations;
     uj.style.animationDuration = "2s";
     uj.style.animationFillMode = "forwards";
-    document.body.appendChild(uj);
+    setTimeout(() => {    
+        document.body.appendChild(uj);
+    }, delay*1000);
 
 }
 
@@ -422,23 +465,26 @@ function Third_card(){
     document.body.appendChild(uj);
 }
 
-function Szivek_kiirasa(){
+function Print_hearts(){
     let sajat_szivek = document.getElementById("playerHearts");
     let ellenfel_szivek = document.getElementById("opponentHearts");
 
+    console.log(sajat_eletek);
+    
+
     ellenfel_szivek.innerHTML = ""
-    for(let i=0;i<Math.floor(ellenfel_eletek);i++){
+    for(let i=0;i<Math.floor(ellenfel_eletek / 2);i++){
         ellenfel_szivek.innerHTML += '<img src="' + egesz_sziv + '">';
     }
     if(ellenfel_eletek % 2){
         ellenfel_szivek.innerHTML += '<img src="' + fel_sziv + '">';
     }
-    for(let i = 0;i<Math.floor(ellenfel_eletek_max - ellenfel_eletek);i++){
+    for(let i = 0;i<Math.floor((ellenfel_eletek_max - ellenfel_eletek) / 2);i++){
         ellenfel_szivek.innerHTML += '<img src="' + ures_sziv + '">';
     }
 
     sajat_szivek.innerHTML = "";
-    for(let i=0;i<Math.floor(sajat_eletek/2);i++){
+    for(let i=0;i<Math.floor(sajat_eletek / 2);i++){
         sajat_szivek.innerHTML += '<img src="' + egesz_sziv + '">';
     }
     if(sajat_eletek % 2){
@@ -453,9 +499,15 @@ function Szivek_kiirasa(){
 }
 
 function Delete_cards(){
+    sajat_kartya_darabszam = 0;
+    sajat_kartyaosszeg = 0;
+    ellenfel_kartya_darabszam = 0;
+    ellenfel_kartyaosszeg = 0;
+    sajat_asz = 0;
+    ellenfel_asz = 0;
+    megallt = false;
     const harmadik = document.getElementById("harmadik");
     harmadik.remove();
-    console.log(harmadik);
     
     for(let i = 0;i<sajat_kartya_darabszam + ellenfel_kartya_darabszam-1;i++){
         const cards = document.getElementById("kartya");
@@ -465,9 +517,21 @@ function Delete_cards(){
 
 
 
-/*function Vege_van_e(){
-    
-}*/
+function Is_it_over(){
+    if(ellenfel_eletek == 0){
+        let nyertel = document.getElementById("win");
+        console.log(nyertel);
+        
+        nyertel.style.display = "block";
+    }else if(sajat_eletek == 0){
+        let vesztettel = document.getElementById("lose");
+        console.log(vesztettel);
+        
+        vesztettel.style.display = "block";
+    }else{
+        Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
+    }
+}
 
 
 

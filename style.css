@@ -414,7 +414,8 @@ button.stop {
 
 /* KIÍRÁS */
 
-.win {
+#win {
+    display: none;
     top: 35%;
     left: 36%;
     position: fixed;
@@ -426,7 +427,8 @@ button.stop {
     box-shadow: 5px 5px 30px black;
 }
 
-.lose {
+#lose {
+    display: none;
     top: 35%;
     left: 36%;
     position: fixed;
