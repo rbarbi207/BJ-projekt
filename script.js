@@ -66,10 +66,13 @@ function Giveup(){
     Print_hearts();
 
     can_be_started = true
-
-    setTimeout(() => {
-        Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
-    }, 2000);
+    if(sajat_eletek > 0){
+        setTimeout(() => {
+            Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
+        }, 2000);
+    }else{
+        Is_it_over();
+    }
 
 }
 
