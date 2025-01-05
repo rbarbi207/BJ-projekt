@@ -1,4 +1,4 @@
-const lapok = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+let lapok = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 // - volt-e már használva az adott lap
 
 let sajat_eletek = 10;
@@ -23,6 +23,8 @@ let megallt = false;
 let ellenfel_asz = 0;
 let sajat_asz = 0;
 
+let can_be_started = true;
+
 const egesz_sziv = "pictures/szív.png";
 const fel_sziv = "pictures/fél_szív.png";
 const ures_sziv = "pictures/empty_szív.png";
@@ -33,22 +35,25 @@ let harmadik_kartya_szin = "";
 /*  animation-fill-mode: forwards; - nem megy vissza az animáció az eredeti helyére*/
 
 function Start(sajat, ellenfel, ellenfel_max){
-    sajat_eletek = sajat;
-    ellenfel_eletek = ellenfel;
-    ellenfel_eletek_max = ellenfel_max;
-    console.log(sajat_eletek);
-    
-    setTimeout(() => {
-        Print_hearts();
-    }, 1000);
-    setTimeout(() => {Dealer_card(0);}, 1000);
-    setTimeout(() => {Card(0);}, 2000);
-    setTimeout(() => {Third_card(0);}, 3000);
-    setTimeout(() => {Card(0);}, 4000);
+    if(can_be_started){
+        can_be_started = false;
+        sajat_eletek = sajat;
+        ellenfel_eletek = ellenfel;
+        ellenfel_eletek_max = ellenfel_max;
+        console.log(sajat_eletek);
+        
+        setTimeout(() => {
+            Print_hearts();
+        }, 1000);
+        setTimeout(() => {Dealer_card(0);}, 1000);
+        setTimeout(() => {Card(0);}, 2000);
+        setTimeout(() => {Third_card(0);}, 3000);
+        setTimeout(() => {Card(0);}, 4000);
+    }
 }
 
 function Double(){
-    duplazva = true;
+    if(sajat_kartya_darabszam <= 2 && sajat_kartyaosszeg < 21) duplazva = true;
 }
 
 function Giveup(){
@@ -59,6 +64,9 @@ function Giveup(){
     }
     Delete_cards();
     Print_hearts();
+    setTimeout(() => {
+        Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
+    }, 2000);
 
 }
 
@@ -168,6 +176,8 @@ function Stop(){
 
     setTimeout(() => {
         Delete_cards();
+        console.log("Delete");
+        
     }, delay*1000 + 2000);
     setTimeout(() => {
         Print_hearts();
@@ -291,16 +301,7 @@ function Card(){
             }else{
                 sajat_eletek = Math.max(0, sajat_eletek-2);
             }
-            sajat_kartyaosszeg = 0;
-            ellenfel_kartyaosszeg = 0;
-            megallt = false;
-            sajat_asz = 0;
-            ellenfel_asz = 0;
             setTimeout(() => {  Delete_cards(); }, 3000);
-            setTimeout(() => { 
-                sajat_kartya_darabszam = 0; 
-                ellenfel_kartya_darabszam = 0;
-            }, 3000);
             setTimeout(() => {
                 Is_it_over();
             }, 3000);   
@@ -499,13 +500,7 @@ function Print_hearts(){
 }
 
 function Delete_cards(){
-    sajat_kartya_darabszam = 0;
-    sajat_kartyaosszeg = 0;
-    ellenfel_kartya_darabszam = 0;
-    ellenfel_kartyaosszeg = 0;
-    sajat_asz = 0;
-    ellenfel_asz = 0;
-    megallt = false;
+
     const harmadik = document.getElementById("harmadik");
     harmadik.remove();
     
@@ -513,17 +508,28 @@ function Delete_cards(){
         const cards = document.getElementById("kartya");
         cards.remove();
     }
+    sajat_kartya_darabszam = 0;
+    sajat_kartyaosszeg = 0;
+    ellenfel_kartya_darabszam = 0;
+    ellenfel_kartyaosszeg = 0;
+    sajat_asz = 0;
+    ellenfel_asz = 0;
+    megallt = false;
+    duplazva = false;
 }
 
 
 
 function Is_it_over(){
+    can_be_started = true;
     if(ellenfel_eletek == 0){
+        lapok = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
         let nyertel = document.getElementById("win");
         console.log(nyertel);
         
         nyertel.style.display = "block";
     }else if(sajat_eletek == 0){
+        lapok = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
         let vesztettel = document.getElementById("lose");
         console.log(vesztettel);
         
@@ -570,14 +576,9 @@ function Is_it_over(){
             "<li>Néhány blackjackjátékban a feladás lehetővé teszi, hogy eldobd a lapodat, és visszakapd a kezdeti       téted 50%-át, ha úgy érzed, hogy biztosan veszteni fogsz az osztó ellen, feltéve, ha az általad     játszott variánsban a feladás megengedett.</li>";
         }
         else if(oldal == 3){
-            document.getElementById("szabaly").innerHTML = "<p>Kettéosztás</p>"+
-            "<li>Lényegében a kettéosztás egy kézből kettőt csinál, így több esélyed lesz nyerni. Amikor kettéosztasz egy lapot, egy további tétet tehetsz az újonnan létrehozott második kézre, ennek értéke megegyezik az eredeti tétével. A kettéosztás a következő helyzetekben fordulhat elő:</li>"+
-            "<ul><li>két egyforma értékű kezdőkártyát kapsz (király-tíz, hat-hat stb.) Ezután mindkét lappal függetlenül játszol, azok a saját értékük szerint nyernek, vesztenek vagy érnek el döntetlent.</li></ul>"
-        }
-        else if(oldal == 4){
             document.getElementById("szabaly").innerHTML = "<p>Duplázás</p>"+
             "<li>A duplázáslehetővé teszi, hogy megduplázd az osztónak okozott sebzést, de te is duplán sebzőtsz.</li>"+
-            "<li>Duplázni kettéosztás utén is tudsz de csak egyszer duplázhatsz.</li>"
+            "<li>Duplázni csak addig tudsz, amíg kevesebb, mint 3 lapod van, illetve Blackjack (21) esetén sem tudsz.</li>"
         }
        
     
