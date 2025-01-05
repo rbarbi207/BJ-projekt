@@ -64,6 +64,9 @@ function Giveup(){
     }
     Delete_cards();
     Print_hearts();
+
+    can_be_started = true
+
     setTimeout(() => {
         Start(sajat_eletek, ellenfel_eletek, ellenfel_eletek_max);
     }, 2000);

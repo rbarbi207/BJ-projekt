@@ -551,74 +551,74 @@ button.retry:hover, button.cancel:hover, button.next:hover {
 
 @keyframes odamegy_oszto1{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 65%; bottom: 45%;}
+    100%{right: 65%; bottom: 36%;}
 }
 
 @keyframes odamegy_oszto2{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 63%; bottom: 44%;}
+    100%{right: 63%; bottom: 35%;}
 }
 
 @keyframes odamegy_oszto3{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 61%; bottom: 43%;}
+    100%{right: 61%; bottom: 34%;}
 }
 
 @keyframes odamegy_oszto4{
     0%{right: 32%; bottom: 24%}
-    100%{right: 59%; bottom: 42%;}
+    100%{right: 59%; bottom: 33%;}
 }
 
 @keyframes odamegy_oszto5{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 57%; bottom: 41%;}
+    100%{right: 57%; bottom: 32%;}
 }
 
 @keyframes odamegy_oszto6{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 55%; bottom: 40%;}
+    100%{right: 55%; bottom: 31%;}
 }
 
 @keyframes odamegy_oszto7{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 53%; bottom: 39%;}
+    100%{right: 53%; bottom: 30%;}
 }
 
 /*Az osztó kártyái: */
 
 @keyframes odamegy1{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 65%; bottom: 15%;}
+    100%{right: 65%; bottom: 13%;}
 }
 
 @keyframes odamegy2{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 63%; bottom: 16%;}
+    100%{right: 63%; bottom: 14%;}
 }
 
 @keyframes odamegy3{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 61%; bottom: 17%;}
+    100%{right: 61%; bottom: 15%;}
 }
 
 @keyframes odamegy4{
     0%{right: 32%; bottom: 24%}
-    100%{right: 59%; bottom: 18%;}
+    100%{right: 59%; bottom: 16%;}
 }
 
 @keyframes odamegy5{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 57%; bottom: 19%;}
+    100%{right: 57%; bottom: 17%;}
 }
 
 @keyframes odamegy6{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 55%; bottom: 20%;}
+    100%{right: 55%; bottom: 18%;}
 }
 
 @keyframes odamegy7{
     0%{right: 32%; bottom: 24%;}
-    100%{right: 53%; bottom: 21%;}
+    100%{right: 53%; bottom: 19%;}
 }
 
 
